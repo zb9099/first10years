@@ -32,7 +32,7 @@ void outarr(int a[], int n)
 }
 void process(int a[], int n)
 {
-	int min=a[0],max=a[0],imin=0,imax=0,i,j=0;
+	int min=a[0],max=a[0],imin=0,imax=0,i;
 	for (i = 0; i < n;i++)
 	{
 		if (a[i] < min)
@@ -40,16 +40,16 @@ void process(int a[], int n)
 			min = a[i];
 			imin = i;
 		}
-		if (a[i] < max)
+		if (a[i] > max)
 		{
 			max = a[i];
-			imax = j;
+			imax = i;
 		}
 	}
 	i = a[0];
-	a[0] = a[imax];
+	a[0] = a[imin];
+	a[imin] = i;
+	i= a[n - 1];
+	a[n - 1] = a[imax];
 	a[imax] = i;
-	j= a[n - 1];
-	a[n - 1] = a[imin];
-	a[imin] = j;
 }
