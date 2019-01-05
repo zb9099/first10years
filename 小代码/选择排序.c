@@ -13,6 +13,7 @@ int main()
 				max = arr[j];
 			}
 		}
+		//这里应该记录最大数组的位置，而不是记录其值
 		arr[i] = max;
 	}
 	for (int k = 0; k < 8; k++)
