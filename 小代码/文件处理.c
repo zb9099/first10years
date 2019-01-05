@@ -22,7 +22,7 @@ int main()
 		ch = getchar();
 	}
 	*/
-	//fscanf ÓÃµÄÂß¼­²»ÇåÎú
+	//fscanf ç”¨çš„é€»è¾‘ä¸æ¸…æ™°
 	fscanf(fp, "%d %d", &j, &i);
 	printf("%d %d", i, j);
 	fclose(fp);
