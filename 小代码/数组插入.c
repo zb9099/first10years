@@ -37,7 +37,7 @@ int main()
 				c[s] = a[s - 1];
 			}
 		}
-		else
+		else if(b>a[4])
 		{
 			c[5] = b;
 			for (int s = 0; s < 5; s++)
