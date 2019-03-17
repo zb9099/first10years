@@ -2,19 +2,21 @@
 
 int main()
 {
-	int max = 0;
-	int arr[8] = { 5,4,9,6,2,1,8,7 };
-	for (int i = 0; i < 8; i++)
+	int temp,t;
+	int arr[10] = { 5,4,9,6,2,1,8,7,10,12 };
+	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j + i < 8; j++)
+		temp = i;
+		for (int j = 0; j + i < 10; j++)
 		{
-			if (arr[(j + i)] > max)
+			if (a[(j + i)] > a[temp])
 			{
-				max = arr[j];
+				temp = j + i;
 			}
 		}
-		//这里应该记录最大数组的位置，而不是记录其值
-		arr[i] = max;
+		t = a[i];
+		a[i] = a[temp];
+		a[temp] = t;
 	}
 	for (int k = 0; k < 8; k++)
 	{
